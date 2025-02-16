@@ -17,3 +17,5 @@ Frontend: HTML, CSS, JavaScript
 Backend: PHP (XAMPP server)
 
 Data Storage: JSON files
+
+![image alt](https://github.com/sanjanashashidhar/MobKart-E---Commerce-Website/blob/3f5df5fb3d48d72171377b2a004bf9a184d167f7/1.png)
