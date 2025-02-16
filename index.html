@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MobKart - Online Shopping</title>
+    <link rel="stylesheet" href="styles.css">
+    <script>
+        function addToCart(productName, price) {
+            let cart = JSON.parse(localStorage.getItem('cart')) || [];
+            cart.push({ name: productName, price: price });
+            localStorage.setItem('cart', JSON.stringify(cart));
+            alert(productName + " added to cart!");
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f8f9fa;
+            color: #333;
+        }
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #343a40;
+            padding: 15px;
+            color: white;
+        }
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+        }
+        .search-bar {
+            padding: 8px;
+            width: 40%;
+            border-radius: 5px;
+            border: 1px solid #ddd;
+        }
+        .nav-links a {
+            color: white;
+            margin-left: 15px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .nav-links {
+            display: flex;
+            align-items: center;
+        }
+        .cart-icon {
+            width: 20px;
+            height: 20px;
+            margin-left: 5px;
+        }
+        .hero {
+            text-align: center;
+            padding: 20px;
+            background-color: #6c757d;
+            font-size: 24px;
+            font-weight: bold;
+            color: white;
+        }
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            padding: 20px;
+        }
+        .product {
+            text-align: center;
+            border: 1px solid #ddd;
+            padding: 15px;
+            border-radius: 5px;
+            background-color: white;
+        }
+        .product img {
+            width: 100%;
+            height: auto;
+            max-height: 250px;
+            object-fit: contain;
+            border-radius: 5px;
+        }
+        .price {
+            font-size: 18px;
+            color: red;
+            font-weight: bold;
+        }
+        .old-price {
+            text-decoration: line-through;
+            color: gray;
+            font-size: 16px;
+        }
+        .discount {
+            color: green;
+            font-weight: bold;
+            font-size: 16px;
+        }
+        .buy-now, .add-to-cart {
+            background-color: #007bff;
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            margin-top: 10px;
+            margin-right: 5px;
+        }
+        .buy-now:hover, .add-to-cart:hover {
+            background-color: #0056b3;
+        }
+        .social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 15px; /* Spacing between icons */
+    margin-top: 10px;
+}
+
+.social-icons a {
+    display: inline-block;
+    width: 40px; /* Set width */
+    height: 40px; /* Set height */
+    background-color: #fff; /* White background for a circular effect */
+    border-radius: 50%; /* Makes icons circular */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.social-icons a:hover {
+    transform: scale(1.1); /* Slight zoom effect on hover */
+    background-color: #007bff; /* Highlight effect */
+}
+
+.social-icons img {
+    width: 24px; /* Icon size */
+    height: 24px;
+    filter: brightness(0) invert(1); /* Makes icons white */
+}
+
+    </style>
+</head>
+<body>
+    <header>
+        <div class="navbar">
+            <div class="logo">MobKart</div>
+            <input type="text" class="search-bar" placeholder="Search for products...">
+            <div class="nav-links">
+                <a href="login.html">Login</a>
+                <a href="cart.html">Cart <img src="cart.jpg" alt="Cart" class="cart-icon"></a>
+            </div>
+        </div>
+    </header>
+
+    <section class="hero">
+        <h1>Biggest Mobile Sale - Up to 50% Off <br> MobKart - A One Stop Solution for Mobile Phones.</h1>
+    </section>
+
+    <section class="product-grid">
+        <div class="product">
+            <img src="Apple-iPhone-16-Pro-128GB-Black-Titanium-8-364x364-optimized 1,37,900.webp" alt="Phone 1">
+            <h3>iPhone 16 Pro Max</h3>
+            <p class="old-price">₹1,99,955</p>
+            <p class="discount">45% OFF</p>
+            <p class="price">₹1,37,900</p>
+            <button class="buy-now" onclick="window.location.href='phone1.html'">Buy Now</button>
+            <button class="add-to-cart" onclick="addToCart('iPhone 16 Prox Max', 499)">Add to Cart</button>
+        </div>
+        <div class="product">
+            <img src="s galaxy s25 ultra.png" alt="Phone 2">
+            <h3>Samsung Galaxy S25 Ultra</h3>
+            <p class="old-price">₹1,59,898</p>
+            <p class="discount">23% OFF</p>
+            <p class="price">₹1,29,999</p>
+            <button class="buy-now" onclick="window.location.href='phone2.html'">Buy Now</button>
+            <button class="add-to-cart" onclick="addToCart('Samsung Galaxy S25 Ultra', 399)">Add to Cart</button>
+        </div>
+        <div class="product">
+            <img src="vivo x200 5G 94,999.avif" alt="Phone 2">
+            <h3>Vivo X200 5G</h3>
+            <p class="old-price">₹1,20,648</p>
+            <p class="discount">27% OFF</p>
+            <p class="price">₹94,999</p>
+            <button class="buy-now" onclick="window.location.href='phone3.html'">Buy Now</button>
+            <button class="add-to-cart" onclick="addToCart('Vivo X200 5G', 399)">Add to Cart</button>
+        </div>
+        <div class="product">
+            <img src="xiaomi 14 ulta 99999.jpg" alt="Phone 2">
+            <h3>Xiaomi 14 Ultra</h3>
+            <p class="old-price">₹1,22,998</p>
+            <p class="discount">23% OFF</p>
+            <p class="price">₹99,999</p>
+            <button class="buy-now" onclick="window.location.href='phone4.html'">Buy Now</button>
+            <button class="add-to-cart" onclick="addToCart('Xiaomi 14 Ultra', 399)">Add to Cart</button>
+        </div>
+        <div class="product">
+            <img src="oneplus 13 70k.png" alt="Phone 2">
+            <h3>OnePlus 13 5G</h3>
+            <p class="old-price">₹93,099</p>
+            <p class="discount">33% OFF</p>
+            <p class="price">₹69,999</p>
+            <button class="buy-now" onclick="window.location.href='phone5.html'">Buy Now</button>
+            <button class="add-to-cart" onclick="addToCart('OnePlus 13 5G', 399)">Add to Cart</button>
+        </div>
+        <div class="product">
+            <img src="realme x 70 5g.jpg" alt="Phone 2">
+            <h3>Realme X70 5G</h3>
+            <p class="old-price">₹15,999</p>
+            <p class="discount">13% OFF</p>
+            <p class="price">₹14,699</p>
+            <button class="buy-now" onclick="window.location.href='phone6.html'">Buy Now</button>
+            <button class="add-to-cart" onclick="addToCart('Realme X70 5G', 399)">Add to Cart</button>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-section">
+                <h3>About MobKart</h3>
+                <p>Your one-stop destination for the latest and greatest smartphones at unbeatable prices. Experience seamless shopping with secure payments and fast delivery.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="shop.html">Shop</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="faq.html">FAQs</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Contact Us</h3>
+                <p>Email: support@mobkart.com</p>
+                <p>Phone: +91 98765 43210</p>
+                <p>Address: 123, ABCD Road, Hubli, Karnataka, India</p>
+            </div>
+            <div class="footer-section">
+                <h3>Follow Us</h3>
+                <div class="social-icons">
+                    <a href="#"><img src="facebbok.png" alt="Facebook"></a>
+                    <a href="#"><img src="twitter.jpg" alt="Twitter"></a>
+                    <a href="#"><img src="insta.jpg" alt="Instagram"></a>
+                    <a href="#"><img src="youtube.png" alt="YouTube"></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+</body>
+</html>

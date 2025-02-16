@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OnePlus 13 5G</title>
+    <link rel="stylesheet" href="styles.css">
+    <script>
+        function addToCart() {
+            let cart = JSON.parse(localStorage.getItem('cart')) || [];
+            let product = { name: "Smartphone A", price: 499, img: "phone1.jpg" };
+            cart.push(product);
+            localStorage.setItem('cart', JSON.stringify(cart));
+            alert("Smartphone A added to cart!");
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f8f9fa;
+            color: #333;
+        }
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #343a40;
+            padding: 15px;
+            color: white;
+        }
+        .product-details {
+            text-align: center;
+            padding: 20px;
+        }
+        .product-details img {
+            width: 300px;
+            height: auto;
+            border-radius: 5px;
+        }
+        .price {
+            font-size: 22px;
+            color: red;
+            font-weight: bold;
+        }
+        .buy-now, .add-to-cart {
+            background-color: #007bff;
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            margin-top: 10px;
+            margin-right: 5px;
+        }
+        .buy-now:hover, .add-to-cart:hover {
+            background-color: #0056b3;
+        }
+        .price {
+            font-size: 18px;
+            color: red;
+            font-weight: bold;
+        }
+        .old-price {
+            text-decoration: line-through;
+            color: gray;
+            font-size: 16px;
+        }
+        .discount {
+            color: green;
+            font-weight: bold;
+            font-size: 16px;
+        }
+        .social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 15px; /* Spacing between icons */
+    margin-top: 10px;
+}
+
+.social-icons a {
+    display: inline-block;
+    width: 40px; /* Set width */
+    height: 40px; /* Set height */
+    background-color: #fff; /* White background for a circular effect */
+    border-radius: 50%; /* Makes icons circular */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.social-icons a:hover {
+    transform: scale(1.1); /* Slight zoom effect on hover */
+    background-color: #007bff; /* Highlight effect */
+}
+
+.social-icons img {
+    width: 24px; /* Icon size */
+    height: 24px;
+    filter: brightness(0) invert(1); /* Makes icons white */
+}
+    </style>
+</head>
+<body>
+    <header>
+        <div class="navbar">
+            <div class="logo">MobKart</div>
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="cart.html">Cart</a>
+            </div>
+        </div>
+    </header>
+
+    <section class="product-details">
+        <div class="product">
+            <img src="oneplus 13 70k.png" alt="Phone 2">
+            <h3>OnePlus 13 5G</h3>
+            <p class="old-price">₹93,099</p>
+            <p class="discount">33% OFF</p>
+            <p class="price">₹69,999</p>
+            <button class="buy-now" onclick="window.location.href='buy5.html'">Buy Now</button>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-section">
+                <h3>About MobKart</h3>
+                <p>Your one-stop destination for the latest and greatest smartphones at unbeatable prices. Experience seamless shopping with secure payments and fast delivery.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="shop.html">Shop</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="faq.html">FAQs</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Contact Us</h3>
+                <p>Email: support@mobkart.com</p>
+                <p>Phone: +91 98765 43210</p>
+                <p>Address: 123, ABCD Road, Hubli, Karnataka, India</p>
+            </div>
+            <div class="footer-section">
+                <h3>Follow Us</h3>
+                <div class="social-icons">
+                    <a href="#"><img src="facebbok.png" alt="Facebook"></a>
+                    <a href="#"><img src="twitter.jpg" alt="Twitter"></a>
+                    <a href="#"><img src="insta.jpg" alt="Instagram"></a>
+                    <a href="#"><img src="youtube.png" alt="YouTube"></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
